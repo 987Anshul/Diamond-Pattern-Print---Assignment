@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <title>Diamond Pattern Print - Assignment</title>
+    <body>
+        <h2>Diamond Pattern</h2>
+        <script>
+            let n = 5;
+            let string = "";
+            //External main loop for printing upside pyramid
+            for (let i = 1; i <= n; i++){
+                //inner loop for printing spaces
+                for (let j = 1; j <= n-i; j++){
+                    string += " ";
+                }
+                //inner loop for printing stars
+                for (let k = 0; k < 2*i-1; k++){
+                    string += "*";
+                }
+            string += "\n";
+            }
+            //External main loop for printing downside pyramid
+            for (let i = 0; i < n; i++){
+                //inner loop for printing spaces
+                for (let j = 0; j < i; j++){
+                    string += " ";
+                }
+                //inner loop for printing stars
+                for (let k = 0; k < 2*(n-i)-1; k++){
+                    string += "*";
+                }
+            string += "\n";
+            }
+            console.log(string);
+        </script>
+    </body>
+</html>
